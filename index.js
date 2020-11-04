@@ -189,7 +189,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return `${km} kilometers equals ${km*0.6214} miles`
+  return km*0.621371
 }
 console.log(miles(4))
 
@@ -216,12 +216,15 @@ function feet(cm){
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start to count down from the number received 
   2. At each iteration, it should return this string: 
-      "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
+      "(number) bottles of soda on the wall, (number) bottles of soda, you take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(){
-
+function annoyingSong(number){
+  for(let i=99; i<100; i--){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+  }
 }
+console.log(annoyingSong(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
