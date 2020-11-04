@@ -154,8 +154,8 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-let computer=Math.random;
-let user=Math.random;
+let computer=Math.random();
+let user=Math.random();
 
 function game(user, computer){
     if(computer<0.33){
@@ -169,10 +169,11 @@ function game(user, computer){
       return "you win!";
     }else if(computer==='rock' && user==='scissors' || computer==='paper' && user==='rock' || computer==='scissors' && user==='paper'){
       return "you lose!";
-    }else if(computer==='rock' && user==='rock' || computer==='paper' && user==='paper' || computer==='scissors' && user==='scissors'){
+    }else if(computer===user){
       return "it's a tie";
     }
 }
+console.log(game(user, computer));
   
   
 
@@ -218,9 +219,9 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(){
+
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -238,9 +239,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+  if(score<60){
+    return 'you got an F';
+  }else if(score<70){
+    return 'you got a D';
+  }else if(score<80){
+    return 'you got a C';
+  }else if (score<90){
+    return 'you got a B';
+  }else{
+    return 'you got an A';
   }
+}
+console.log(grade(100));
   
   
   
