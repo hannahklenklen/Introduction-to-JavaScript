@@ -154,8 +154,24 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+let computer=Math.random;
+let user=Math.random;
+
 function game(user, computer){
-    /*add your code here*/
+    if(computer<0.33){
+    computer= 'rock';
+    }else if(computer<0.66){
+      computer= 'paper';
+    }else if(computer<=1){
+      computer= 'scissors';
+    }
+    if(user==='rock' && computer==='scissors' || user==='paper' && computer==='rock' || user==='scissors' && computer==='paper'){
+      return "you win!";
+    }else if(computer==='rock' && user==='scissors' || computer==='paper' && user==='rock' || computer==='scissors' && user==='paper'){
+      return "you lose!";
+    }else if(computer==='rock' && user==='rock' || computer==='paper' && user==='paper' || computer==='scissors' && user==='scissors'){
+      return "it's a tie";
+    }
 }
   
   
@@ -171,9 +187,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  return `${km} kilometers equals ${km*0.6214} miles`
+}
+console.log(miles(4))
 
 
 
@@ -185,8 +202,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48;
   }
  
 
